@@ -33,7 +33,7 @@ class QuizBrain:
         elif answer in ['quit', 'exit', 'off']:
             print(f"\nYour last score is {self.true_cnt}/{self.question_number}\n"
                   f"Hope you enjoyed the quiz :)")
-            return answer
+            return 'exit'
         else:
             self.question_number += 1
             print(f"Your score is {self.true_cnt}/{self.question_number}")
