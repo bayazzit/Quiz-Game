@@ -10,10 +10,7 @@ for question in question_data:
 playing = True
 quiz = QuizBrain(question_bank)
 
-while playing:
-    if quiz.still_has_question():
-        answer = quiz.next_question()
-        if answer in ['exit', 'quit', 'off']:
-            playing = False
-    else:
-        playing = False
+while quiz.still_has_question():
+    answer = quiz.next_question()
+    if answer == 'exit':
+        break
